@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRAGRANCE</title>
+    <!-- <link rel="stylesheet" href="./fragrance.css"> -->
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./fragrance.css">
 </head>
 
@@ -56,7 +58,7 @@
                 </svg> LOGIN </a>
             <span> | </span>
 
-            <a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            <a href="" id="bag"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-bag-fill" viewBox="0 0 16 16">
                     <path
                         d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
@@ -69,7 +71,7 @@
         <div>SKIN CARE</div>
         <div>FRAGRANCE</div>
         <div>HAIRCARE</div>
-        <div>TOOLS & BRUSHES</div>
+        <div><a href="./brush.html">TOOLS & BRUSHES</a></div>
         <div>BRANDS</div>
     </div>
     <div id="banner">
@@ -78,27 +80,29 @@
     <div id="container">
         <div>
             <form action="">
-                <select name="" id="Brand">
+                <select name="" id="byBrand">
                     <option value="">Select Brand</option>
                     <option value="">Dior</option>
                     <option value="">Tom Ford</option>
                     <option value="">Paco Rebanne</option>
+                    <option value="">D & G</option>
+                    <option value="">DOLCE & GABBANA</option>
                     <option value="">Kenzo</option>
                 </select>
-                <select name="" id="Brand">
+                <select name="" id="bysize">
                     <option value="">Choose Size</option>
                     <option value="">50 ML - 100 ML</option>
                     <option value="">100 ML - 150 ML</option>
                     <option value="">150 ML - 175 ML</option>
                     <option value="">175 ML - 200 ML</option>
                 </select>
-                <select name="" id="Brand">
+                <select name="" id="bycolour">
                     <option value="">Select Colour</option>
                     <option value="">No-Colour (498)</option>
                     <option value="">NA (5)</option>
 
                 </select>
-                <select name="" id="Brand">
+                <select name="" id="byprice">
                     <option value=""> By Price</option>
                     <option value="">High-Low</option>
                     <option value="">Low-High</option>
@@ -111,7 +115,18 @@
         </div>
     </div>
 
-
+    <div id="backtotop">
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+            </svg> BACK TO TOP</button>
+    </div>
+    <div id="subscribe">
+        <h1>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h1>
+        <input placeholder="      Enter your email address" size="50" type="text">
+        <button>SUBSCRIBE</button>
+    </div>
     <div id="description">
         <h1>Sephora online India is a trailblazer in the Indian beauty scene</h1>
         <p>A leader in luxury beauty and skincare, our purpose at Sephora online India is to create an inviting online
@@ -240,95 +255,167 @@
     var totalData = [
         {
             image_url:
-                "",
+                "https://cdn02.nnnow.com/web-images/medium/styles/OAX4GQN2DWT/1584600726358/1.jpg",
             name: "MIU MIU",
-            desc: " ",
-            price: "1170",
+            desc: "Lea'u Rose Eau De Toilette",
+            price: 1170,
         },
         {
             image_url:
-                "https://cdn02.nnnow.com/web-images/medium/styles/OAX4GQN2DWT/1584600726358/1.jpg",
+                "https://cdn03.nnnow.com/web-images/medium/styles/WG0Z8R9JJAZ/1606400988562/1.jpg",
             name: "TOM FORD",
-            price: 699,
-            desc: " ",
+            price: 6990,
+            desc: "Soleil Neige Eau De Perfume",
         },
         {
             image_url:
                 "https://cdn08.nnnow.com/web-images/medium/styles/YK69R52W7CE/1583388026275/1.jpg",
             name: "COSTUME NATIONAL",
-            price: 945,
-            desc: " ",
+            price: 9450,
+            desc: "Luxrous Eau De Toilette",
         },
         {
             image_url:
                 "https://cdn07.nnnow.com/web-images/medium/styles/DF36OYB9553/1604552492842/1.jpg",
             name: "DIESEL",
-            price: 399,
-            desc: " ",
+            price: 3399,
+            desc: "Aqua Pour Home de Ferfume",
         },
         {
             image_url:
                 "https://cdn19.nnnow.com/web-images/medium/styles/M1RZSNSIUBE/1604658376914/1.jpg",
             name: "KENZO",
-            price: 1620,
-            desc: " ",
+            price: 3620,
+            desc: "Gorgeius Eau de Ferfume",
         },
         {
             image_url:
                 "https://cdn08.nnnow.com/web-images/medium/styles/AZ3EK0CDL98/1606544460406/1.jpg",
             name: "PACO RABANNE",
-            price: 1440,
-            desc: " ",
+            price: 2440,
+            desc: "Rabbane De Best",
         },
         {
             image_url:
                 "https://cdn04.nnnow.com/web-images/medium/styles/OJZ43I1K6VT/1604307793287/1.jpg",
             name: "DOLS & GABBANA",
             price: 1999,
-            desc: " ",
+            desc: "Eternity Flame Women",
         },
         {
             image_url:
                 "https://cdn11.nnnow.com/web-images/medium/styles/Q0VOLPS69D6/1593590000733/1.jpg",
             name: "CAROLINA HERRERA",
-            price: 769,
-            desc: " ",
+            price: 7069,
+            desc: "Sweat to Sparkle ",
         },
         {
             image_url:
                 "https://cdn16.nnnow.com/web-images/medium/styles/IYKZK4Z0CCF/1610348954676/1.jpg",
             name: "BVLGARI",
             price: 3000,
-            desc: " ",
+            desc: "Spark Eau de Toilette",
         },
         {
             image_url:
                 "https://cdn13.nnnow.com/web-images/medium/styles/1VAO6SHXI15/1584952541400/1.jpg",
             name: "CALVIN KLEIN",
             price: 2500,
-            desc: " ",
+            desc: "Dream Dusk Eau de perfume",
+        },
+        {
+            image_url:
+                "https://cdn06.nnnow.com/web-images/medium/styles/1N5ADLOXIIC/1606543344465/1.jpg",
+            name: "PACO RABBANE",
+            price: 5600,
+            desc: "Olympea Intense De Perfume",
+        },
+        {
+            image_url:
+                "https://cdn11.nnnow.com/web-images/medium/styles/GI3JORUM8Y6/1593071533034/1.jpg",
+            name: "GIVENCHY",
+            price: 2900,
+            desc: "Gentlemen Eau De Toilette",
+        },
+        {
+            image_url:
+                "https://cdn13.nnnow.com/web-images/medium/styles/6QFRWWY6GN7/1589003350410/1.jpg",
+            name: "TOM FORD",
+            price: 6500,
+            desc: "Dream Dusk Eau de perfume",
+        },
+        {
+            image_url:
+                "https://cdn12.nnnow.com/web-images/medium/styles/GHMU19530AA/1615975549685/1.jpg",
+            name: "D & G",
+            price: 5600,
+            desc: "Olympea Intense De Perfume",
+        },
+        {
+            image_url:
+                "https://cdn12.nnnow.com/web-images/medium/styles/276NOJRM5DV/1606544375850/1.jpg",
+            name: "GIVENCHY",
+            price: 6900,
+            desc: "Women Eau De Toilette",
         },]
+    let cartArr = JSON.parse(localStorage.getItem("cartItems")) || []
+    let productArr = JSON.parse(localStorage.getItem("productList")) || []
+    displayData(totalData)
+    // document.querySelector("#byprice").addEventListener("change", filterData)
+    // function filterData() {
+    //     let selected = document.querySelector("#byprice").value;
+    //     if (selected == "High-Low") {
+    //         productArr.sort(function () {
+    //             if (a.price > b.price) return 1
+    //             if (a.price < b.price) return -1
+    //             return 0
+    //         })
 
-    totalData.forEach(function (ele) {
-        let box = document.createElement("div")
-        let product_img = document.createElement("img")
-        let title = document.createElement("h4")
-        let desc = document.createElement("p")
-        let price = document.createElement("h4")
+    //     }
+    //     displayData(productArr)
+    // }
 
-        product_img.setAttribute("src", ele.image_url)
-        title = ele.name
-        desc = ele.desc
-        price = ele.price
+    function displayData(totalData) {
+
+        totalData.forEach(function (ele) {
+            let box = document.createElement("div")
+            let product_img = document.createElement("img")
+            let title = document.createElement("h4")
+            title.innerText = ele.name
+
+            let desc = document.createElement("p")
+            desc.innerText = ele.desc
+
+            let price = document.createElement("h3")
+            price.innerText = "Rs " + ele.price
+
+            let addToCart = document.createElement("button")
+            addToCart.innerText = "ADD TO BAG"
+
+            product_img.setAttribute("src", ele.image_url)
+
+            addToCart.addEventListener("click", function () {
+                cartArr.push(ele)
+                localStorage.setItem("cartItems", JSON.stringify(cartArr))
 
 
+            })
+            box.append(product_img, title, desc, price, addToCart)
 
-
-
-        box.append(product_img, title, desc, price)
-
-        document.querySelector("#productlist").append(box)
+            document.querySelector("#productlist").append(box)
+            productArr.push(ele)
+            localStorage.setItem("productList", JSON.stringify(productArr))
+        })
+    }
+    let newData = totalData.filter(function () {
 
     })
-
+    document.querySelector("#bag").addEventListener("click", function () {
+        event.preventDefault()
+        window.location.href = "cart.html"
+    })
+    // document.querySelector("form").addEventListener("change", function () {
+    //     let byprice = document.querySelector("#byprice").value
+    //     console.log(byprice)
+    // })
 </script>

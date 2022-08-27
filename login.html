@@ -82,7 +82,7 @@
         <form action="" id="signup">
             <h2>LOGIN TO ACCOUNT</h2>
             <input id="email" type="text" placeholder="Enter Your Email">
-            <input id="pass" type="text" placeholder="Enter Your Password">
+            <input id="pass" type="password" placeholder="Enter Your Password">
             <button id="login">LOGIN</button>
 
 
@@ -97,6 +97,7 @@
     let loginData = JSON.parse(localStorage.getItem("userData"))
     function userLogin() {
         event.preventDefault();
+        window.location.href = "index.html"
         loginData.forEach(function (ele) {
             let loginEmail = document.querySelector("#email").value;
             let loginPass = document.querySelector("#pass").value;

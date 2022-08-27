@@ -89,13 +89,17 @@
   font-size: 14px;
   letter-spacing: 3px;
   position: sticky;
-  background-color: white;
   top: 0px;
+  background-color: white;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 25px;
 }
 #navmiddle a {
+  text-decoration: none;
+  color: #ff55aa;
+}
+#navmiddle a:hover {
   text-decoration: none;
   color: #ff55aa;
 }
@@ -190,31 +194,32 @@
 #brands h4 {
   margin-bottom: 10px;
 }
+#brands h4:hover {
+  color: #ec1681;
+}
 
 #container {
   width: 95%;
-  height: 800px;
-  border: red 1px solid;
+  height: fit-content;
   margin: auto;
   display: flex;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 250opx);
+  margin-bottom: 50px;
 }
-/* #container > div {
-  border: #ec1681 1px solid;
-} */
-
 #container > div:nth-child(1) {
   width: 20%;
   height: 800px;
-  border: blue 1px solid;
   position: static;
 }
 #container > div:nth-child(2) {
   width: 80%;
-  height: 800px;
-  border: #f5a 1px solid;
+  height: fit-content;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 250opx);
+  gap: 20px;
 }
 #products {
   display: grid;
@@ -225,4 +230,86 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 30%);
+}
+#productlist > div {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  cursor: pointer;
+}
+#productlist img {
+  width: 100%;
+  height: 85%;
+}
+#productlist > div > p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#productlist > div > button {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 5px;
+}
+#productlist > div > button:hover {
+  letter-spacing: 7px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: black 2px solid;
+}
+form select {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+  background-color: white;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border: black 2px solid;
+  font-size: 15px;
+  margin-top: 50px;
+}
+form select:hover {
+  letter-spacing: 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+form select option {
+  background-color: white;
+  color: black;
+}
+#navbottom > div:hover {
+  color: #f5a;
+}
+#buy {
+  height: 50px;
+  border: none;
+  background-color: black;
+  color: white;
+  width: 150px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+#container h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#buy:hover {
+  width: 200px;
+  letter-spacing: 7px;
+  font-size: 18px;
+  color: #ec1681;
+}
+#navbottom a {
+  text-decoration: none;
+  color: black;
 }
