@@ -24,6 +24,9 @@
   margin-top: 10px;
   cursor: pointer;
 }
+#navtop > div:hover {
+  color: #ec1681;
+}
 #navtop > div:nth-child(1) {
   width: 90%;
   cursor: pointer;
@@ -100,6 +103,10 @@
   color: #ff55aa;
 }
 #navmiddle a:hover {
+  text-decoration: none;
+  color: #ff55aa;
+}
+#navbottom a:hover {
   text-decoration: none;
   color: #ff55aa;
 }

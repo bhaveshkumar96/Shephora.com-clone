@@ -82,12 +82,12 @@
             <form action="">
                 <select name="" id="byBrand">
                     <option value="">Select Brand</option>
-                    <option value="">Dior</option>
-                    <option value="">Tom Ford</option>
-                    <option value="">Paco Rebanne</option>
-                    <option value="">D & G</option>
-                    <option value="">DOLCE & GABBANA</option>
-                    <option value="">Kenzo</option>
+                    <option value="Dior">MIU MIU</option>
+                    <option value="Tom Ford">TOM FORD</option>
+                    <option value="Paco Rebanne">PACO REBBANE</option>
+                    <option value="D & G">D & G</option>
+                    <option value="DOLCE & GABBANA">DOLCE & GABBANA</option>
+                    <option value="Kenzo">Kenzo</option>
                 </select>
                 <select name="" id="bysize">
                     <option value="">Choose Size</option>
@@ -103,9 +103,9 @@
 
                 </select>
                 <select name="" id="byprice">
-                    <option value=""> By Price</option>
-                    <option value="">High-Low</option>
-                    <option value="">Low-High</option>
+                    <option value="By Price"> By Price</option>
+                    <option value="High-Low">High-Low</option>
+                    <option value="Low-High">Low-High</option>
 
                 </select>
             </form>
@@ -361,18 +361,16 @@
     let cartArr = JSON.parse(localStorage.getItem("cartItems")) || []
     let productArr = JSON.parse(localStorage.getItem("productList")) || []
     displayData(totalData)
-    // document.querySelector("#byprice").addEventListener("change", filterData)
-    // function filterData() {
-    //     let selected = document.querySelector("#byprice").value;
-    //     if (selected == "High-Low") {
-    //         productArr.sort(function () {
-    //             if (a.price > b.price) return 1
-    //             if (a.price < b.price) return -1
-    //             return 0
-    //         })
+    // Page is Crashing So i left the sorting
 
-    //     }
+    // document.querySelector("#byBrand").addEventListener("change", filterData)
+    // function filterData() {
+    //     let selected = document.querySelector("#byBrand").value;
+    //     let filteredData = productArr.filter(function (ele) {
+    //         return ele.name == selected
+    //     })
     //     displayData(productArr)
+
     // }
 
     function displayData(totalData) {
@@ -414,8 +412,5 @@
         event.preventDefault()
         window.location.href = "cart.html"
     })
-    // document.querySelector("form").addEventListener("change", function () {
-    //     let byprice = document.querySelector("#byprice").value
-    //     console.log(byprice)
-    // })
+
 </script>
